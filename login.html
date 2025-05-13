@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Plataforma Inclusiva - Login & Registro</title>
+</head>
+
+<body class="fundo">
+
+    
+    <div class="conteiner" id="conteiner">
+        <!-- Formulário de Registro -->
+        <div class="formulario-container cadastrar">
+            <form id="formulario-registro" action="register.php" method="post">
+                <span>Preencha os campos abaixo para se registrar</span>
+                <input type="text" name="nome_responsavel" placeholder="Nome do Responsável" required>
+                <input type="email" name="email" placeholder="E-mail do Responsável" required>
+                <input type="text" name="nome_crianca" placeholder="Nome da Criança" required>
+                <div class="grupo-formulario">
+                    <label for="genero">Gênero da Criança</label>
+                    <select id="genero" name="genero" required>
+                        <option value="" disabled selected>Selecione o gênero</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="idade">Idade da Criança (5 a 8 anos)</label>
+                    <input type="number" id="idade" name="idade" min="5" max="8" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="nivel-autismo">Nível de Autismo</label>
+                    <select id="nivel-autismo" name="nivel_autismo" required>
+                        <option value="" disabled selected>Selecione o nível</option>
+                        <option value="leve">Leve</option>
+                        <option value="moderado">Moderado</option>
+                        <option value="severo">Severo</option>
+                    </select>
+                </div>
+                <div class="grupo-formulario">
+                    <input type="password" name="senha" placeholder="Crie uma senha" required>
+                </div>
+                <div class="grupo-formulario">
+                    <input type="password" name="confirmar_senha" placeholder="Confirme a senha" required>
+                </div>
+                <button type="submit" class="botao-primario">Registrar</button>
+            </form>
+        </div>
+
+        <!-- Formulário de Login -->
+        <div class="formulario-container entrar">
+            <form id="formulario-login" action="login_process.php" method="post">
+                <h1>Entrar</h1>
+                <div class="icones-sociais">
+                    <a href="#" class="icone"><i class='bx bxl-google'></i></a>
+                    <a href="#" class="icone"><i class='bx bxl-facebook'></i></a>
+                </div>
+                <span>Entre com e-mail e senha</span>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <a href="#">Esqueceu a senha?</a>
+                <button type="submit" class="botao-primario">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Painel de Alternância -->
+        <div class="alternar-container">
+            <div class="alternar">
+                <div class="painel-alternar alternar-esquerda">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Entre com seu e-mail e senha para acessar a plataforma.</p>
+                    <button class="oculto" id="entrar">Entrar</button>
+                </div>
+                <div class="painel-alternar alternar-direita">
+                    <h1>Olá, Amigo!</h1>
+                    <p>Registre-se para começar a jornada de inclusão e aprendizado.</p>
+                    <button class="oculto" id="registrar">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="animate.js"></script>
+</body>
+
+</html>

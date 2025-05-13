@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <header class="sidebar-header">
+            <a href="#" class="hearder-logo">
+                <img src="logo.png" alt="alem do espectro">
+            </a>
+            <button class="toggler sidebar-toggler">
+                <span class="material-symbols-rounded">chevron_left</span>
+            </button>
+            <button class="toggler menu-toggler">
+                <span class="material-symbols-rounded">menu</span>
+            </button>
+        </header>
+        
+        <nav class="sidebar-nav">
+            <ul class="nav-list primary-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-content="jogos-content">
+                        <span class="nav-icon material-symbols-rounded">stadia_controller</span> 
+                        <span class="nav-label">Jogos</span>
+                    </a>
+                    <span class="nav-tooltip">Jogos</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-content="aulas-content">
+                        <span class="nav-icon material-symbols-rounded">dictionary</span> 
+                        <span class="nav-label">Aulas</span>
+                    </a>
+                    <span class="nav-tooltip">Aulas</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-content="notificacoes-content">
+                        <span class="nav-icon material-symbols-rounded">notifications</span> 
+                        <span class="nav-label">Notificacoes</span>
+                    </a>
+                    <span class="nav-tooltip">Notificacoes</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-content="terapeuta-content">
+                        <span class="nav-icon material-symbols-rounded">group</span> 
+                        <span class="nav-label">Agendar com Terapeuta</span>
+                    </a>
+                    <span class="nav-tooltip">Agendar com Terapeuta</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon material-symbols-rounded">analytics</span> 
+                        <span class="nav-label">Analytics</span>
+                    </a>
+                    <span class="nav-tooltip">Analytics</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon material-symbols-rounded">star</span> 
+                        <span class="nav-label">Rendimentos</span>
+                    </a>
+                    <span class="nav-tooltip">Rendimentos</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon material-symbols-rounded">settings</span> 
+                        <span class="nav-label">settings</span>
+                    </a>
+                    <span class="nav-tooltip">settings</span>
+                </li>
+            </ul>
+
+            <ul class="nav-list secondary-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-content="profile-container">
+                        <span class="nav-icon material-symbols-rounded">account_circle</span> 
+                        <span class="nav-label">Perfil</span>
+                    </a>
+                    <span class="nav-tooltip">Perfil</span>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-icon material-symbols-rounded">logout</span> 
+                        <span class="nav-label">Logout</span>
+                    </a>
+                    <span class="nav-tooltip">Logout</span>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        <!-- Conteúdo de Jogos -->
+        <div class="content hidden" id="jogos-content">
+            <h2>Jogos Educativos</h2>
+            <div class="content-item">
+                <h3>Jogo da Memória</h3>
+                <p>Melhore sua capacidade de memorização com este jogo divertido.</p>
+            </div>
+            <div class="content-item">
+                <h3>Quebra-Cabeça</h3>
+                <p>Desenvolva seu raciocínio lógico montando peças.</p>
+            </div>
+        </div>  
+
+        <!-- Perfil -->
+        <div class="content hidden" id="profile-container">
+            <div class="profile-view">
+                <div class="profile-header">
+                    <div class="avatar-container">
+                        <img id="user-avatar" src="" alt="Foto do Perfil" class="profile-avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="user-name">Nome do Usuário</h1>
+                        <p id="user-role">Cargo/Função</p>
+                        <p id="user-email">usuario@exemplo.com</p>
+                    </div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="jogos-completos">0</span>
+                        <span class="stat-label">Jogos Completos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="aulas-concluidas">0</span>
+                        <span class="stat-label">Aulas Concluídas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="sessoes">0</span>
+                        <span class="stat-label">Sessões</span>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <span class="detail-icon material-symbols-rounded">phone</span>
+                        <span id="user-phone" class="detail-value">Não informado</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon material-symbols-rounded">calendar_month</span>
+                        <span id="user-join-date" class="detail-value">Membro desde Jan/2023</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon material-symbols-rounded">location_on</span>
+                        <span id="user-location" class="detail-value">Não informado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Conteúdo de Aulas (padrão visível) -->
+        <div class="content active" id="aulas-content">
+            <h2>Aulas Disponíveis</h2>
+            <div class="aula-item">
+                <h3>Aula 1: Introdução ao Autismo</h3>
+                <p>Conceitos básicos e entendimento inicial sobre o espectro autista.</p>
+                <button class="btn-aula">Assistir Aula</button>
+            </div>
+            <div class="aula-item">
+                <h3>Aula 2: Técnicas de Comunicação</h3>
+                <p>Métodos eficazes para melhorar a interação social.</p>
+                <button class="btn-aula">Assistir Aula</button>
+            </div>
+            <div class="aula-item">
+                <h3>Aula 3: Desenvolvimento de Habilidades</h3>
+                <p>Exercícios práticos para desenvolvimento cognitivo.</p>
+                <button class="btn-aula">Assistir Aula</button>
+            </div>
+        </div>
+        
+        <!-- Conteúdo de Notificações -->
+        <div class="content hidden" id="notificacoes-content">
+            <h2>Suas Notificações</h2>
+            <div class="notificacao-item">
+                <p>Você tem uma nova mensagem do terapeuta.</p>
+                <span class="notificacao-data">Hoje, 10:30</span>
+            </div>
+        </div>
+        
+        <!-- Conteúdo de Agendamento com Terapeuta -->
+        <div class="content hidden" id="terapeuta-content">
+            <h2>Agendar Sessão</h2>
+            <form class="agendamento-form">
+                <label for="data">Data:</label>
+                <input type="date" id="data">
+                
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario">
+                
+                <button type="submit" class="btn-agendar">Agendar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
